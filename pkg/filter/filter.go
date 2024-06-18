@@ -122,9 +122,9 @@ func filterFileEntity(h heartbeat.Heartbeat, config Config) error {
 	}
 
 	// skip files that don't exist on disk
-	if _, err := os.Stat(entity); os.IsNotExist(err) {
-		return fmt.Errorf(fmt.Sprintf("skipping because of non-existing file %q", entity))
-	}
+	//if _, err := os.Stat(entity); os.IsNotExist(err) {
+	//	return fmt.Errorf(fmt.Sprintf("skipping because of non-existing file %q", entity))
+	//}
 
 	// when including only with project file, skip files when the project doesn't have a .wakatime-project file
 	if config.IncludeOnlyWithProjectFile {
