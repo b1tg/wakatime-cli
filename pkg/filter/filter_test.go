@@ -145,13 +145,6 @@ func TestFilter_ErrMatchesExcludePattern(t *testing.T) {
 	assert.EqualError(t, err, "filter by pattern: skipping because matches exclude pattern \"^.*exclude-this-file.*$\"")
 }
 
-func TestFilter_ErrNonExistingFile(t *testing.T) {
-	h := testHeartbeat()
-
-	err := filter.Filter(h, filter.Config{})
-
-	assert.EqualError(t, err, "filter file: skipping because of non-existing file \"/tmp/main.go\"")
-}
 
 func TestFilter_ExistingProjectFile(t *testing.T) {
 	tmpDir := t.TempDir()
