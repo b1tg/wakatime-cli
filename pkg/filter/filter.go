@@ -2,7 +2,7 @@ package filter
 
 import (
 	"fmt"
-	"os"
+//	"os"
 
 	"github.com/wakatime/wakatime-cli/pkg/heartbeat"
 	"github.com/wakatime/wakatime-cli/pkg/log"
